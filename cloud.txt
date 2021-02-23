@@ -1,0 +1,329 @@
+IAAS
+- virtualized computing resources over the internet
+- Resources are available as a service
+- Services are highly scalable
+- Dynamic and flexible
+- GUI and API-based access
+- Automated administrative tasks
+
+PAAS
+●Delivers applications over the internet
+●Resources are available as a service
+●Build and deployment tools for rapid application management and deployment
+●Builds on virtualization technology, so resources can easily be scaled up or down as per the organization's need
+
+SAAS
+●Managed from a central location
+●Hosted on a remote server
+●Accessible over the internet
+●Users are not responsible for hardware and software updates. Updates are applied automatically.
+●The services are purchased on the pay-as-per-use basis
+
+What is cloud computing?
+ natural evolution of distributed systems and internet
+
+characteristics of cloud compu
+ - On demand self service - compeletly automated, realtime delivery
+ - broad network access - allow ip, http, rest; access from anywhere on internet
+ - Resource Pooling - drawn from comman pool, econimies of scale, infra runs at high efficiency
+ - Rapid elasticity - dynamically allocated, and resources released when needed, fully automated
+ - Measured service - pay-as-you-go, usage monitered,controlled reported
+
+deployment models:
+ - private cloud - exclusive use by a single organization comprising multiple consumers 
+ - community cloud - specific community of consumers from organizations that have shared concerns
+ - public cloud - open use by the general public
+ - hybrid cloud - composition of two or more distinct cloud infrastructures are bound together by standardized or proprietary technology
+
+service models:
+- saas
+- paas
+- iaas
+extended service models:
+-storage as a service
+-Communications as a Service
+-Network as a Service
+-Monitoring as a Service
+
+sla - fundamental ground for interactions b/w cloud actors, requirements fulfilled by cloud providers, scope, etc
+
+cloud orchestration:
+Service layer > Resource abstraction and control layer > physical resource layer
+
+service layer:
+infra > platform > software
+
+compute engine - iaas
+kubernetes - hybrid
+app engine - paas
+cloud functions - serverless logic
+managed service - automated elasetic resources
+
+VM - an isolated runtime environment, can run on a single physical system
+advan vm in cloud -> on-demand scalability, easy integration, live migration, api support
+
+cloud storage
+digital data is stored in logical pools
+Physical storage spans through multiple servers
+many distributed resources
+redundancy and distribution of data
+the creation of versioned copies
+ files are organized into buckets
+
+advantages cloud storage
+pay as you go
+easy sharing
+data protection
+disaster proof backup
+easy integration
+
+Multi-regional > most frequently used
+regional > accessed frequently within a region
+nearline > less than once a month
+coldline > once a year
+
+big query - import, export tables
+app engine - object storage, logs, datastorage backups
+compute engine - startup scripts, images, general object storage
+cloud sql - import, export tables
+
+cloud bigtable - noSQL,  wide-column database service for terabyte applications
+
+Why choose Cloud Bigtable?
+●Replicated storage●Data encryption in-flight and at rest●Role-based ACLs●Drives major applications such as Google Analytics and Gmail
+
+nosql - distributed database system, dynamic schema, hierarchical data storage, not so good for complex queries, Horizontally scalable, consistency, availability, partition tolerance
+
+naas:
+allows us to access to network infrastructure directly and securely
+
+
+microservice with app engine:
+App Engine Services as microservices In an App Engine project, you can deploy multiple microservices as separate services,
+
+Why REST APIs are a great fit for microservices?
+- As communication between microservices and with client applications has to happen fast with low overhead and network latency
+
+Type of Virtualization
+●CPU Virtualization ●Memory Virtualization ●I/O Virtualization ●Storage Virtualization ●Network Virtualization 
+
+Platform virtualization
+ - vm create > using hardware and software
+- host OS- A control OS
+- Guest OS- OS running on simulated environment
+
+hypervisor - firmware or hardware that creates and runs virtual machines
+
+iaas:
+used by network architects
+access to vm, virtual storage
+service model, visualized computing over internet
+needs technical knowledge
+popular b/w developer & researchers
+
+paas:
+used by developer
+access to run time env of deployment and development tools for applic
+computing model, tools used for development of applica
+needs subject to understand basic setup
+popular between devoloper who develop apps and scripts
+
+saas:
+used by end user
+access to the end user
+service model, host software make available for client
+company handle everything
+popular b/w consumer and company
+
+Full virtualization:
+binary translation + direct execution
+guest os is unaware about the virtualization
+
+Para virtualization:
+guest os is aware about virtualization
+Hypervisor provides a api called hypercall
+hypercall to execute privileged instruction
+i/o access through host os driver
+
+container based virtualization:
+guest is emulated using vse
+light and fast
+less secure
+
+Type - 1:
+runs directly on the host hardware, interfacing with the cpu, memory, devices.
+host os = guest os
+dom0 and domU
+all privileged instructions > hypervisor
+vmware
+
+Type 2:
+runs as a program and is used for software virtualization
+no access to hardware directly
+varity of host systems without modifications
+works with both full software virtualization and hardware assisted software virtualization
+virtualbox
+
+Containers share the OS kernel of the host and thus are lightweight.
+
+containers:
+process level virtualization
+self describing and portable image format
+runs the same on any compliant runtime without extra dependency, regardless of underlying machine
+same kernal
+host communication via syscalls
+hypervisor runs separate copies of kernal
+near bare-metal performance
+
+Namespaces:
+Partition essential kernel structures to create virtual environments
+six name spaces:
+mnt, pid,net,ipc,uts
+
+cgroups (control groups) subsystem is a resource management solution providing a generic process grouping framework
+
+Docker Swarm - scheduler and service management tool
+Docker Compose - Container orchestration tool for creating container groups
+Kubernetes (Google)-Advanced scheduler capable of managing container groups
+
+Kubernetes:
+contains atleast one master and multiple compute nodes
+master is reponsible for exposing the api, scheduling the deployments and managing the overall cluster
+node runs a container runtime, such as docker or rkt, along with agent that communicates with the master
+
+etcd  - opensource, distributed key-value database
+
+fluentd - logging agent in node
+
+pod is a Kubernetes abstraction that represents a group of one or moreapplication containers
+
+Key Design Principles
+● Workload Scalability
+● High Availability
+● Security
+● Portability
+
+JavaScript applications in the client side are largely event-driven
+
+onChange and onClick, to make your script react to events.
+
+event handlers:
+●onAbort: user aborts the loading
+●onClick: user clicks on the link
+●onChange: user changes value of an element
+●onFocus: user gives input focus to window
+●onLoad: user loads page in Browser
+
+Node.js is an open source, cross-platform runtime environment for developingserver-side and networking applications
+
+Node.js = Runtime Environment + JavaScript Library
+
+Features of  Node.js?
+●Asynchronous and Event Driven
+●Very Fast
+●Single Threaded but Highly Scalable
+●No Buffering
+●License
+
+Where to Use Node.js?
+●I/O bound Applications
+●Data Streaming Applications
+●Data Intensive Real-time Applications (DIRT)
+●JSON APIs based Applications
+●Single Page Applications
+
+Components of a Node.js Application
+1.Import required modules
+2.Create server
+3.Read request and return response
+
+NPM is a package manager for Node.js packages
+
+Express is a minimal and flexible Node.js web applicationframework
+
+App Engine is a PaaS for building scalable applications, makes deployment, maintenance, and scalability easy, suited for building scalable web applications and mobile backends
+
+Your application must conform to sandbox constraints:
+○No writing to local file system
+○All requests time out at 60 seconds
+○Third-party software installations are limited
+
+App Engine flexible environment
+●Build and deploy containerized apps with a click
+●No sandbox constraints
+●Can access App Engine resources
+●Standard runtimes: Python, Java, Go, Node.js
+●Custom runtime support: Any language that supports HTTP requests
+●Package your runtime as a Dockerfile
+
+standard / flexible environment
+
+instance type milliseconds/ mintus
+ssh no / yes
+write to local no / yes
+3rd party binaries no / yes
+network access via app engine / yes
+price free daily use / pay for resource allocation per hour
+
+ A monolithic architecture is the traditional unified model for the design of a software program. All deployable parts of the app contained within that single app.  larger the app, the harder it is to quickly address new problems and add new features
+
+Challenges in Monolithic Software:
+difficult to scale
+long build/test/release cycles
+operations is a nightmare
+architecture is hard to maintain and evolve
+new releases take months
+long time to add new features
+lack of agility
+lack of innovation
+frustrated customers
+
+problems in monolitic approach
+inflexibility
+potentially unreliable
+unscalable
+not suitable for continuous development
+slow development
+
+microservices
+A collection of loosely coupled, independently deployable services
+API gateways help to prevent malicious attacks by providing an additional layer of protection from attack vectors such as SQL Injection, XML Parser exploits, and denial-of-service (DoS) attacks.
+
+REST is acronym for REpresentational State Transfer,  uses a resource identifier to identify the particular resource involved in an interaction between components.
+
+Design Principal
+1.Domain Driven Design
+2.Hide Implementation Details
+3.Decentralization
+4.Failure Isolation
+5.Continuous Delivery through DevOps Culture
+
+Advantages of Microservices 
+●Relatively small components/service
+●Ease for deployment
+●Easier to scale development
+●Improved fault isolation
+●Scale Independently
+●No long-term commitment to any stack
+
+Drawbacks of microservices
+1.Not automatically the right solution for every project
+2.How to integrate the services with a guide to drive the process
+3.Discovery of applications
+4.Getting a very fragmented system where developers need to spend a lot of time and effort on gluing together services and tools
+
+Container Registry is a private container image registry that runs on Google Cloud Platform.
+
+Is it possible to import a local sql database into gcp
+- yes
+
+diff b/w master and slave node
+master node is typically the only node that gets written to, while the slave node is typically there for an up to the second backup, or as a read replica
+
+GCP's core storage options: Cloud Storage, Cloud SQL, Cloud Spanner, Cloud Datastore, and Google Bigtable.
+
+Principle behind dividing a monolithic application into different micoeservices --> if we split an app into multiple independant components, we could easily do a  fault analysis, expanding a microservice is easier when the base app is set up. the entire platform doesn't have to be written in one language
+
+Example of cases where Kubernetes, standard and flexible env used  --> kubernetes is used in microservices, standard is used when we have a monolithic app like a simple go or php server, flexible is used when we have a docker to be deployed
+
+How to deploy a monolithic application into cloud --> direct way is to use app engine. long way is to use compute engine to setup dependencies manually and deploy it

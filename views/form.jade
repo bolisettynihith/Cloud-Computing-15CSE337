@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1  Student Details
+  form(action='users/process' method='POST')  
+    |Name: 
+    input(type='text' name='name')    
+    br
+    |Roll No: 
+    input(type='text' name='roll_no')    
+    br
+    |Mark: 
+    input(type='text' name='makrs')    
+    br
+    input(type='submit' value='Submit')
+
+  
+
